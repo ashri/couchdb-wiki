@@ -1,0 +1,56 @@
+{
+    "_id":"_design/documents",
+    "language":"javascript",
+    "views":
+    {
+        "by_slug":
+        {
+            "map":"function(doc) 
+            {
+							var slug = doc.space.replace(/^\\s+|\\s+$/g, '').replace(/[^a-zA-Z0-9 -]/g, '').replace(/\\s+/g, '-').toLowerCase();
+							emit(slug+'/'+doc.slug, doc);
+            }
+            "
+        },
+        "by_space":
+        {
+            "map":"function(doc) 
+            {
+							var slug = doc.space.replace(/^\\s+|\\s+$/g, '').replace(/[^a-zA-Z0-9 -]/g, '').replace(/\\s+/g, '-').toLowerCase();
+							emit(slug, doc);
+            }
+            "
+        },
+        "recent":
+        {
+            "map":"function(doc) 
+            {
+							emit(doc.date_updated || doc.date_created, doc);
+            }
+            "
+        }
+    }
+}
+
+{
+    "_id":"_design/spaces",
+    "language":"javascript",
+    "views":
+    {
+        "by_slug":
+        {
+            "map":"function(doc) 
+            {                
+							emit(doc.space, 1);
+            }
+            ",
+            "reduce":"function (keys, values) 
+            {
+							return sum(values);
+            }
+            "
+        }
+    }
+}
+
+

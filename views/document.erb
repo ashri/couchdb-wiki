@@ -1,0 +1,20 @@
+<section id="content">
+	<h2><%= @title %> <sup class="state"><%= @state %></sup></h2>
+	<article>
+		<%= @content %>
+	</article>
+</section>
+<aside>
+	<ul>
+		<li>Space: <a href="/<%=@space_slug%>"><%= @space %></a></li>
+		<li></li>
+		<li>Tags: <%=@tags%></li> 
+		<li></li>
+		<li>Author: <%=@author%></li> 
+		<li>Date created: <%=@date_created%></li> 
+		<li>Date updated: <%=@date_updated%></li> 
+		<li>Slug: <%=@slug%></li>
+		<li></li>
+		<li><a href="?edit=true">Edit</a></li>
+	</ul>
+</aside>

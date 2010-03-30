@@ -1,0 +1,21 @@
+<section id="content">
+	<h2>Spaces</h2>
+	<ul>
+  <% @spaces.each do |space| %>
+		<li>
+			<a href="<%=space[:slug]%>"><%= space[:title] %></a>
+			<span class="summary-info"><%=space[:doc_count]%> Document<% if (space[:doc_count] != 1)%>s<% end %></span>
+		</li>
+  <% end %>
+	</ul>
+</section>
+<% if @recent_changes %>
+<aside id="recent-changes">
+	<h2>Recent Changes</h2>
+	<ul>
+  <% @recent_changes.each do |doc| %>
+		<li><a href="<%=doc[:slug]%>" class="doc-link"><%= doc[:title] %></a> in <a href="<%=doc[:space_slug]%>"><%= doc[:space] %></a> on <%= doc[:date] %></li>
+  <% end %>
+	</ul>
+</aside>
+<% end %>

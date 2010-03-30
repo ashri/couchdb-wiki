@@ -1,0 +1,33 @@
+<section id="content">
+	<h2>Editing <%= @title %> <sup class="state"><%= @state %></sup></h2>
+	<form method="POST" action="/">
+		<input type="hidden" name="id" value="<%=@id%>"/>
+		<input type="hidden" name="revision" value="<%=@revision%>"/>
+
+		<label for="title">Title</label>
+		<input type="text" name="title" value="<%=@title%>"/>
+		<br>
+		
+		<label for="slug">Slug</label>
+		<input type="text" name="slug" value="<%=@slug%>"/>
+		<br>
+
+		<label for="space">Space</label>
+		<input type="text" name="space" value="<%=@space%>"/>
+		<br>
+
+		<label for="content">Content</label>
+		<textarea name="content" cols="120" rows="30"><%=@content%></textarea>
+		<br>
+		
+		<label for="tags">Tags</label>
+		<input type="text" name="tags" value="<%=@tags%>"/>
+		<br>
+		
+		<label for="author">Author</label>
+		<input type="text" name="author" value="<%=@author%>"/>
+		<br>
+
+		<input type="submit" value="Save">
+	</form>
+</section>

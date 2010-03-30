@@ -1,0 +1,13 @@
+<section id="content">
+	<h2><%= @space[:title] %></h2>
+	<article>
+		<ul>
+		  <% @documents.each do |doc| %>
+			<li>
+				<a href="<%=@space[:slug]%>/<%=doc[:slug]%>"><%=doc[:title]%></a>
+				<span class="summary-info">Last Updated by <%=doc[:author]%> on <%= doc[:date_updated] %></span>
+			</li>
+			<% end %>
+		</ul>
+	</article>
+</section>

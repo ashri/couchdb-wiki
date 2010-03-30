@@ -1,0 +1,122 @@
+/* @override http://localhost:4567/screen.css */
+
+header, footer, section, aside {
+	display: block;
+}
+body {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+aside#error-messages {
+	display: none;
+	background-color: #FEE;
+	border: 1px solid #F00;
+	color: #F22;
+}
+
+header {
+	font-size: 2em;
+	text-align: center;
+}
+header a {
+	text-decoration: none;
+	color: crimson;
+}
+header a:hover {
+	color: red;
+}
+header h1 {
+	margin: 0px 0px 0px;
+}
+div#main-page {
+	margin-left: 20px;
+}
+section {
+	font-family: Georgia;
+	font-size: 1em;
+	color: #333;
+	padding: 4px;
+	width: 600px;
+	float: left;
+	margin-bottom: 20px;
+}
+section h2 {
+	margin: 0px;
+}
+section ul {
+	padding: 0px 0px 0px 20px;
+}
+section li {
+}
+section a {
+	text-decoration: none;
+	color: #555;
+}
+section a:hover {
+	color: crimson;
+	text-decoration: underline;
+}
+section span.summary-info {
+	font-size: 0.7em;
+	color: #888;
+}
+sup.state {
+	color: green;
+}
+
+aside {
+	font-family: Georgia;
+	width: 300px;
+	float: left;
+	background-color: #F3F3F3;
+	border: 1px solid #DDD;
+	padding: 0px 4px;
+	margin-top: 20px;
+}
+aside h2 {
+	margin: 0px;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+aside ul {
+	margin: 4px;
+	padding: 0px 4px;
+}
+aside li {
+	font-size: 0.7em;
+	list-style-type: none;
+	color: #888;
+	margin-bottom: 4px;
+}
+aside a {
+	color: #888;
+	text-decoration: none;
+}
+aside a.doc-link {
+	font-size: 1.25em;
+	color: #666;
+}
+aside a:hover {
+	color: crimson;
+	text-decoration: underline;
+}
+
+article h1, article h2, article h3 {
+	font-size: 1.1em;
+}
+section#content form label {
+	float: left;
+	width: 60px;
+	font-size: 0.9em;
+	line-height: 22px;
+}
+section#content form input[type=text] {
+	width: 320px;
+}
+
+footer {
+	clear: both;
+	text-align: center;
+	font-size: 0.8em;
+}
